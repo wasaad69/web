@@ -1,0 +1,64 @@
+header{
+    background: linear-gradient(to right, rgb(0, 174, 255), rgb(43, 255, 0));
+    position: sticky;   
+    border-bottom: 1mm black solid;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20%;
+    top: 0%;
+    z-index: 2;
+}
+
+body{
+    margin: 0;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    font-size: 60px;
+
+}
+
+.lo{
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 50px;
+}
+
+.d{
+    display: inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 30px;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    justify-content: space-between;
+
+
+
+}
+.d::after{
+    content: '';
+    position: absolute; 
+    height: 4px;
+    width: 0;
+    transition: 1s;
+    left: 0;
+    bottom: 0;
+}
+.d:hover:after{
+    width: 100%;
+    background: linear-gradient(to right, rgb(213, 255, 98), rgb(255, 0, 0));
+
+}
+
+
+

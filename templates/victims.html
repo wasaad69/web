@@ -1,0 +1,104 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+<link rel='stylesheet' href="/static/styles/victim.css">
+<style>
+    .ste{
+        color:blueviolet;
+
+    }
+    .styled-button{
+    background-color: #41b125;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    .styled-button:hover{
+        background-color: #1e7921;
+    }
+</style>
+<div style="border-bottom: 1mm solid black; background: linear-gradient(to right, rgb(151, 165, 170), rgb(200, 243, 241)); cursor:default;">
+    Gaza’s Dead: Victims of Israel
+</div>
+
+
+
+<button class="styled-button" id="button1">Infants 0-1</button>
+<button class="styled-button" id="button2">Toddlers 2-4</button>
+<button class="styled-button" id="button3">Children 5-12</button>
+<button class="styled-button" id="button4">Teenagers 13-19</button>
+<button class="styled-button" id="button5">Young Adults 20-30</button>
+<button class="styled-button" id="button6">Adults 31-59</button>
+<button class="styled-button" id="button7">Seniors 60+</button>
+
+<div id = "content-area">
+    <div style="  margin: auto; width: 90%;  padding-top: 50px; padding-bottom:30px; font-size: 40px;">
+        <div style="border:1mm solid #41b125; padding-left:20px; padding-right: 20px; padding-top: 30px; padding-bottom:30px; width: 90%;">
+            <article>        
+                On March 23rd 2025 The Gaza Ministry of Health released a list of Palestinians who were killed in Gaza. This list contains 50,000 plus Palastinians killed in the Gaza Strip. Every person in this list only contains those who were Identified during the Cease Fire before it was unlawfully broken by Israel. This page is dedicated to not only documenting every person on that list but remembering them as well, They will not be forgotten. 
+            </article>  
+        </div>
+ 
+    </div>
+</div>
+
+<script>
+    const button1 = document.getElementById('button1');
+    const button2 = document.getElementById('button2');
+    const button3 = document.getElementById('button3');
+    const button4 = document.getElementById('button4');
+    const button5 = document.getElementById('button5');
+    const button6 = document.getElementById('button6');
+    const button7 = document.getElementById('button7');
+    const contentArea = document.getElementById('content-area');
+
+    button1.addEventListener('click', () => {
+        fetch('/1infants')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+
+    button2.addEventListener('click', () => {
+        fetch('/2toddlers')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+    button3.addEventListener('click', () => {
+        fetch('/3children')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+    button4.addEventListener('click', () => {
+        fetch('/4t')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+    button5.addEventListener('click', () => {
+        fetch('/5ya')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+    button6.addEventListener('click', () => {
+        fetch('/6a')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+    button7.addEventListener('click', () => {
+        fetch('/7s')
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data);
+    });
+</script>
+
+
+
+
+{% endblock %}

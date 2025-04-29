@@ -1,0 +1,34 @@
+header{
+    display: grid;
+    align-items: center;
+    position: relative;
+
+}
+
+.pp{
+    font-size: 40px;
+    background-color: rgb(46, 158, 255);
+    margin: 0;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+.p{
+    display: inline-flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 30px;
+    justify-content: space-between;
+
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+.p:hover {
+    transform: scale(0.5);
+    }
+body{
+    margin: 0;
+}
