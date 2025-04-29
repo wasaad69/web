@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Free Palestine</title>
+        <link rel="stylesheet" href="/static/styles/profile.css">
+        <link rel="shortcut icon" href="/static/fg.png">
+
+    </head>
+    <header>
+        <div>
+            <p class="pp">Who was 
+                {% block name %}{% endblock %}
+            </p>
+        </div>
+        <div style="background-color: rgb(31, 214, 153);">
+            <a class="p" href="/GDT">Back</a>
+            <a class="p" href="">Family Tree</a>
+        </div>
+    </header>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
